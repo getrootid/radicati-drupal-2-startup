@@ -17,9 +17,11 @@ curl -L https://raw.githubusercontent.com/getrootid/radicati-drupal-2-startup/re
 <details>
   <summary>The details</summary>
    <br>
-Here we add a bunch of goodies to the composer.json, as well as updating a couple of other files.
+This patch adds a bunch of goodies to the composer.json, as well as updating a couple of other files.
 
 </details>
+
+### Time to install the goodies!
 
 - If there's a composer.lock file (the wizard generates one) go ahead and delete it.
 - Then run `composer install` and procede on your merry 😄
