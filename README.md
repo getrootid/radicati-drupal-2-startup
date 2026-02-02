@@ -24,7 +24,15 @@ This patch adds a bunch of goodies to the composer.json, as well as updating a c
 ### Time to install the goodies!
 
 - If there's a composer.lock file (the wizard generates one) go ahead and delete it.
-- Then run `composer install` and procede on your merry 😄
+- From your site root, run `composer install`
+- Either import a database or go ahead and visit your local site and run through the minimal install wizard -- recipes will fail if you don't have a database set up!
+- Move to the web directory and run
+
+```bash
+  drush recipe ../recipes/radicati-recipe-site-base
+```
+
+- Use a similar command to install any other recipes that weren't included in site-base that you'd like to use on this site
 
   <br>
 
