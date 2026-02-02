@@ -15,16 +15,54 @@ curl -L https://raw.githubusercontent.com/getrootid/radicati-drupal-2-startup/re
 Once that's complete, you'll be ready to move on to the next patch.
 
 <details>
-  <summary>The nitty gritty details</summary>
-
-The default Pantheon upstream installs Drupal 9. Oddly enough, this repo is the upstream used by Pantheon even if you choose Drupal 11 in the site creation wizard, but they use some secret sauce during the site creation to use the contents of the drupal 11 repo... We're going to use a patch to replicate that secret sauce.
+  <summary>The details</summary>
+   <br>
+The default Pantheon upstream installs Drupal 9. Oddly enough, this older repo is the upstream used by Pantheon even if you choose Drupal 11 in the site creation wizard, but they use some secret sauce during the site creation to use the contents of the drupal 11 repo... We're going to use a patch to replicate that secret sauce.
 
 </details>
 
-### If you installed using Pantheon's dashboard and picked Drupal 11
+## If you installed by cloning Pantheon's [drupal-11-composer-managed](https://github.com/pantheon-upstreams/drupal-11-composer-managed) upstream
 
-The wizard uses the same upstream, but pulls in a different composer.json file (which is what the other patch does). Now you're ready for the Radicati Magic (TM)
+(Or if you installed using the old composer managed upstream and just applied the previous patch)
 
-From the root of your project, type `curl -L https://raw.githubusercontent.com/getrootid/radicati-drupal-2-startup/refs/heads/main/11-to-radicati-drupal-2.patch | git apply -v`.
+### The code
 
-Then you can run `composer install` and procede as usual 😄
+From the root of your project, type
+
+```bash
+curl -L https://raw.githubusercontent.com/getrootid/radicati-drupal-2-startup/refs/heads/main/11-repo-to-dashboard.patch | git apply -v
+```
+
+Once that's complete, you'll be ready to move on to the next patch.
+
+<details>
+  <summary>The details</summary>
+   <br>
+The only difference between cloning this repo and running the dashboard D11 install is that the dashboard installs a pantheon.yml file (which we need to have cause the next patch updates it).
+
+</details>
+
+## If you installed using Pantheon's dashboard and picked Drupal 11
+
+(Or if you've cloned one of the Pantheon repos and have been installing the above patches)
+
+### The code
+
+From the root of your project, type
+
+```bash
+curl -L https://raw.githubusercontent.com/getrootid/radicati-drupal-2-startup/refs/heads/main/11-dashboard-to-radicati-drupal-2.patch | git apply -v
+```
+
+<details>
+  <summary>The details</summary>
+   <br>
+Here we add a bunch of goodies to the composer.json, as well as updating a couple of other files.
+
+</details>
+
+---
+
+## Last but not least
+
+If there's a composer.lock file (the wizard generates one) go ahead and delete it. Then you can run `composer install` and procede on your merry 😄
