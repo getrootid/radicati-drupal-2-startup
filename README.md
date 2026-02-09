@@ -57,3 +57,7 @@ The composer.json file sets you up with a bunch of modules we've found useful on
 - [radicati_recipe_advanced_components](https://github.com/getrootid/radicati_recipe_advanced_components)
 - [radicati_recipe_alerts](https://github.com/getrootid/radicati_recipe_alerts)
 - [radicati_recipe_events](https://github.com/getrootid/radicati_recipe_events)
+
+## Other modules that might be useful:
+
+- [Our go-to Drupal Modules](https://docs.google.com/spreadsheets/d/1a1YJ5nxg6vyhcOir9xdKc-daC3PH_JjtasrQQkJwR6k/edit?usp=sharing)
