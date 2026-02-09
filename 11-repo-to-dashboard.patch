@@ -1,9 +1,0 @@
-diff --git a/pantheon.yml b/pantheon.yml
-new file mode 100644
-index 0000000..d94f16a
---- /dev/null
-+++ b/pantheon.yml
-@@ -0,0 +1,3 @@
-+# Put overrides to your pantheon.upstream.yml file here.
-+# For more information, see: https://pantheon.io/docs/pantheon-yml/
-+api_version: 1

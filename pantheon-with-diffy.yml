@@ -1,0 +1,16 @@
+# For more information, see: https://pantheon.io/docs/pantheon-yml/
+api_version: 1
+php_version: 8.3
+drush_version: 13
+protected_web_paths:
+  - /.user.ini
+  - /xmlrpc.php
+  - /private/
+  - /sites/default/files/private/
+  - /sites/default/files/config/
+workflows:
+  sync_code:
+    after:
+      - type: webphp
+        description: Do a visual regression test with Diffy website
+        script: private/scripts/diffyVisualRegression.php

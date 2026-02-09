@@ -1,0 +1,95 @@
+{
+    "name": "getrootid/drupal-starter-pantheon",
+    "description": "Extra repositories for Drupal libraries used by the site.",
+    "type": "project",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/getrootid/radicati_sitenotice.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/getrootid/radicati_social.git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "cferdinandi/gumshoe",
+                "version": "5.1.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/cferdinandi/gumshoe/archive/refs/heads/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "yowainwright/stickybits",
+                "version": "3.7.9",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/yowainwright/stickybits",
+                    "type": "git",
+                    "reference": "3.7.9"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "michalsnik/aos",
+                "version": "v2.3.4",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/michalsnik/aos",
+                    "type": "git",
+                    "reference": "v2.3.4"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "itsjavi/fontawesome-iconpicker",
+                "version": "master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/itsjavi/fontawesome-iconpicker",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "splidejs/splide",
+                "version": "v4.1.3",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/Splidejs/splide.git",
+                    "type": "git",
+                    "reference": "v4.1.3"
+                },
+                "extra": {
+                    "installer-name": "splide"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "6.0.0-beta.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dropzone/dropzone/releases/download/v6.0.0-beta.2/dist.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ]
+}
